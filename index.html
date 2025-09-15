@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Tiro+Devanagari+Sanskrit:ital@0;1&display=swap" rel="stylesheet">
-     <style>
+    <style>
         body {
             margin: 0;
             padding: 0;
@@ -61,50 +61,9 @@
         .hidden {
             display: none;
         }
-        .loading-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            z-index: 1000;
-        }
-        .loader {
-            border: 8px solid #f3f3f3;
-            border-top: 8px solid #8B4513;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            animation: spin 2s linear infinite;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        .disabled-button {
-            cursor: not-allowed;
-            background-color: #D68C45;
-            opacity: 0.5;
-        }
-        .enabled-button {
-            cursor: pointer;
-            background-color: #4CAF50; /* Green color for active state */
-            opacity: 1;
-        }
     </style>
 </head>
 <body class="bg-[#FBF5E9]">
-
-    <!-- Loading Overlay -->
-    <div id="loadingOverlay" class="loading-overlay hidden">
-        <div class="loader"></div>
-        <p class="mt-4 text-xl font-semibold text-[#8B4513]">Generating PDF...</p>
-    </div>
 
     <!-- Main Container -->
     <div class="full-width">
@@ -138,19 +97,19 @@
                         <a href="https://aiskillshouse.com/student/qr-mediator.html?uid=1919&promptId=6" target="_blank" class="w-64 py-4 text-center text-white text-xl font-bold rounded-full shadow-lg transition-all duration-300
                             bg-gradient-to-r from-[#8B4513] to-[#A0522D] hover:from-[#6B4F46] hover:to-[#8B4513]
                             border-2 border-[#6B4F46] hover:border-[#4A2E2A]
-                            transform hover:scale-105" onclick="showUpload()">
+                            transform hover:scale-105">
                             Click to Launch Gemini
                         </a>
                     </div>
-                    <div class="mt-4" id="uploadSection">
-                        <label for="screenshotInput" class="block text-center px-4 py-2 text-[#4A2E2A] rounded-md cursor-pointer disabled-button" id="uploadLabel">
+                    <div class="mt-4">
+                        <label for="screenshotInput" class="block text-center px-4 py-2 bg-[#F5EADD] border border-[#D68C45] text-[#4A2E2A] rounded-md cursor-pointer hover:bg-[#EAE0C8]">
                             Click to Upload Screenshot
                         </label>
-                        <input type="file" id="screenshotInput" accept="image/*" class="hidden" disabled>
+                        <input type="file" id="screenshotInput" accept="image/*" class="hidden">
                         <div id="fileStatus" class="mt-2 text-center text-sm text-[#6B4F46]">No file selected</div>
                     </div>
-                    <div class="flex justify-center mt-6" id="confirmButtonContainer">
-                        <button id="confirmButton" onclick="confirmScreenshot()" class="px-6 py-3 bg-[#D68C45] text-[#4A2E2A] font-semibold rounded-full shadow-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                    <div class="flex justify-center mt-6">
+                        <button id="confirmButton" onclick="confirmScreenshot()" class="px-6 py-3 bg-[#D68C45] text-[#4A2E2A] font-semibold rounded-full shadow-lg hover:bg-[#C27E3B] transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled>
                             I've Uploaded the Screenshot
                         </button>
                     </div>
@@ -172,7 +131,7 @@
                 </section>
             </div>
         </main>
-  
+     
         <!-- Main Notes Content (Initially Hidden) -->
         <div id="notesContent" class="hidden">
             <!-- Header Section -->
