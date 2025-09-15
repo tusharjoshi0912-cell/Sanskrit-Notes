@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Glimpse of VEDIC LITERATURE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Tiro+Devanagari+Sanskrit:ital@0;1&display=swap" rel="stylesheet">
+     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #FBF5E9; /* Parchment-like background */
+            color: #4A2E2A; /* Dark brown text */
+            overflow-x: hidden;
+        }
+        .full-width {
+            width: 100vw;
+            padding-left: 0;
+            padding-right: 0;
+            box-sizing: border-box;
+        }
+        .header-font {
+            font-family: 'Tiro Devanagari Sanskrit', serif;
+        }
+        .decorative-border {
+            border: 10px solid transparent;
+            border-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.st0%7Bfill:%238B4513;%7D%3C/style%3E%3Cpath class='st0' d='M25,0 L75,0 L100,25 L100,75 L75,100 L25,100 L0,75 L0,25 Z'/%3E%3Cpath class='st0' d='M30,5 L70,5 L95,30 L95,70 L70,95 L30,95 L5,70 L5,30 Z' fill='%23FBF5E9'/%3E%3Cpath class='st0' d='M50,10 C27.9,10 10,27.9 10,50 C10,72.1 27.9,90 50,90 C72.1,90 90,72.1 90,50 C90,27.9 72.1,10 50,10 Z'/%3E%3Ccircle cx='50' cy='50' r='35' fill='%23FBF5E9'/%3E%3Ccircle class='st0' cx='50' cy='50' r='20'/%3E%3C/svg%3E") 20 round;
+            background-color: #F5EADD;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .section-divider {
+            height: 5px;
+            width: 80%;
+            margin: 2rem auto;
+            background: linear-gradient(to right, transparent, #8B4513, transparent);
+        }
+        .card {
+            background-color: #FEFBF3;
+            border: 1px solid #EAE0C8;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .image-container {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 4px solid #EAE0C8;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .highlight {
+            background-color: #FFF2D5;
+            font-weight: 600;
+            padding: 2px 5px;
+            border-radius: 4px;
+            border-bottom: 2px solid #D68C45;
+        }
+        .hidden {
+            display: none;
+        }
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 1000;
+        }
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #8B4513;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .disabled-button {
+            cursor: not-allowed;
+            background-color: #D68C45;
+            opacity: 0.5;
+        }
+        .enabled-button {
+            cursor: pointer;
+            background-color: #4CAF50; /* Green color for active state */
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-[#FBF5E9]">
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay hidden">
+        <div class="loader"></div>
+        <p class="mt-4 text-xl font-semibold text-[#8B4513]">Generating PDF...</p>
+    </div>
+
+    <!-- Main Container -->
+    <div class="full-width">
+
+        <!-- Welcome Page -->
+        <main id="welcomePage" class="py-10">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                <h2 class="text-4xl font-bold header-font text-center mb-4 text-[#8B4513]">Once you've done with the QR scanning, you'll get access to the SANSKRIT notes for tomorrow exam</h2>
+                <section class="text-center">
+                    <h1 class="text-5xl font-bold header-font mb-4 text-[#8B4513]">A Google Student Ambassador Project</h1>
+                    <p class="text-xl text-[#6B4F46]">I need your support to achieve maximum engagement by the end of December. Thank you for your help.</p>
+                </section>
+                
+                <section class="card space-y-6">
+                    <h2 class="text-3xl font-bold header-font text-[#8B4513] text-center">Your First Step: Engaging with Gemini</h2>
+                    <p class="text-lg">This project is designed to help you explore concepts from a new perspective. Follow these steps to begin your experience and access the full notes.</p>
+                    <ol class="list-decimal list-inside space-y-4 text-lg">
+                        <li>Click the button below to open a new chat in Gemini with a pre-written prompt.</li>
+                        <li>
+                            The prompt will either run automatically or appear in the chatbox. If it's in the chatbox, simply hit "Send."
+                            <br><span class="font-bold text-sm text-red-500 mt-2">Note:</span> For those who have already scanned the QR code, your chat will show "prompt already scanned." Please upload a screenshot of that message.
+                            <br><span class="font-bold text-sm text-red-500 mt-2">Note:</span> In some cases, a blue screen might appear, or Gemini might open with a blank chatbox and no pre-filled text. In this case, simply paste this prompt: "Tell me about the Gemini student offer in India" and then take a screenshot of the response. You can also upload a screenshot of the blue screen to proceed.
+                        </li>
+                        <li>After Gemini generates its response, please take a screenshot of the chat.</li>
+                        <li>Once you have the screenshot, you can proceed by clicking the button below.</li>
+                    </ol>
+                    <div class="flex flex-col items-center my-8">
+                        <span class="text-center text-sm font-semibold text-red-600 mb-4">
+                            In case of slow internet, you might need to wait for a minute. Once you click the link, please wait for it to load fully, otherwise it will not be possible to access it again.
+                        </span>
+                        <a href="https://aiskillshouse.com/student/qr-mediator.html?uid=1919&promptId=6" target="_blank" class="w-64 py-4 text-center text-white text-xl font-bold rounded-full shadow-lg transition-all duration-300
+                            bg-gradient-to-r from-[#8B4513] to-[#A0522D] hover:from-[#6B4F46] hover:to-[#8B4513]
+                            border-2 border-[#6B4F46] hover:border-[#4A2E2A]
+                            transform hover:scale-105" onclick="showUpload()">
+                            Click to Launch Gemini
+                        </a>
+                    </div>
+                    <div class="mt-4" id="uploadSection">
+                        <label for="screenshotInput" class="block text-center px-4 py-2 text-[#4A2E2A] rounded-md cursor-pointer disabled-button" id="uploadLabel">
+                            Click to Upload Screenshot
+                        </label>
+                        <input type="file" id="screenshotInput" accept="image/*" class="hidden" disabled>
+                        <div id="fileStatus" class="mt-2 text-center text-sm text-[#6B4F46]">No file selected</div>
+                    </div>
+                    <div class="flex justify-center mt-6" id="confirmButtonContainer">
+                        <button id="confirmButton" onclick="confirmScreenshot()" class="px-6 py-3 bg-[#D68C45] text-[#4A2E2A] font-semibold rounded-full shadow-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                            I've Uploaded the Screenshot
+                        </button>
+                    </div>
+                </section>
+                
+                <div class="section-divider"></div>
+
+                <section class="card space-y-6 text-center">
+                    <h2 class="text-3xl font-bold header-font text-[#8B4513]">Get the Notes</h2>
+                    <p class="text-lg">Once you have uploaded the screenshot, you will get access to Sanskrit notes for your exam tomorrow. Thank you for your support!</p>
+                    <p class="text-lg font-bold">
+                        <span class="highlight">If you want an official Google certificate and a student guide on how to use AI efficiently (not available online anywhere), please email this screenshot to studentambassadormsu@gmail.com.</span>
+                    </p>
+                    <div id="actionButtons" class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 hidden">
+                        <button onclick="showNotes()" class="px-6 py-3 bg-[#4A2E2A] text-white font-semibold rounded-full shadow-lg hover:bg-[#3A221E] transition-colors">
+                            Continue to Notes
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </main>
+  
+        <!-- Main Notes Content (Initially Hidden) -->
+        <div id="notesContent" class="hidden">
+            <!-- Header Section -->
+            <header class="full-width bg-[#4A2E2A] text-[#FBF5E9] py-8 text-center" style="border-bottom: 8px solid #D68C45;">
+                <div class="max-w-5xl mx-auto px-4">
+                    <h1 class="text-4xl md:text-6xl font-bold header-font">A Glimpse of VEDIC LITERATURE</h1>
+                    <p class="mt-2 text-lg text-[#EAE0C8]">by Kumar Sanjay Jha</p>
+                </div>
+            </header>
+
+            <!-- Infographic Body -->
+            <main class="py-10">
+                <div class="px-4 sm:px-6 lg:px-8 space-y-12">
+
+                    <!-- Overview Section -->
+                    <section class="decorative-border p-6 md:p-8">
+                        <h2 class="text-3xl font-bold header-font text-center mb-4 text-[#8B4513]">Overview</h2>
+                        <p class="text-lg text-justify leading-relaxed">
+                            This article is an attempt to present the fundamental texts in what constitutes Vedic Literature. It is a road mark for those who want to set out the explore the depths of the Vedas. The term 'Vedic literature' simply means literature based on or derived from the Vedas. The texts which constitute the Vedic literature are: <span class="highlight">1. The four Vedas i.e. Samhitas, 2. the Brahmanas attached to each of the Samhitas, 3. the Aranyakas, and 4. the Upanishads.</span>
+                        </p>
+                    </section>
+
+                    <div class="section-divider"></div>
+
+                    <!-- The Vedas Section -->
+                    <section>
+                        <h2 class="text-4xl font-bold header-font text-center mb-8 text-[#8B4513]">The Vedas: The Foundation</h2>
+                        <div class="bg-[#F5EADD] p-6 rounded-lg border border-[#EAE0C8] text-center text-lg">
+                             <p>The Rg-Veda, Samveda and Yajurveda are collectively known as <span class="highlight">Vedatrayi</span>. Atharva Veda is considered a later addition. <span class="highlight">Bharatamuni's Natyasastra is considered to be the panchama Veda (fifth Veda)</span>.</p>
+                        </div>
+                        
+                        <!-- Vedas Detailed Grid -->
+                        <div class="mt-8 space-y-10">
+                            <!-- Rg-Veda -->
+                            <div class="card grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                                <div class="md:col-span-2">
+                                    <h3 class="text-2xl font-bold header-font text-[#8B4513]">1. Rg-Veda (Book of Hymns)</h3>
+                                    <p class="mt-2 text-justify">The <span class="highlight">Rg-Veda is the oldest among all Vedas</span>. It must have been compiled over several centuries, with some of the earliest hymns composed around <span class="highlight">1500 BC</span>. Passed on orally from teacher to disciple, its different parts (mandalas) are ascribed to different families of seers. It is the foundation of all Vedic literature and is mainly a collection of hymns by priestly families, recited during sacrifices. The Rg-Veda contains <span class="highlight">1028 hymns (sukta)</span> divided into ten <span class="highlight">mandalas</span>. <span class="highlight">Mandalas 2 to 7 are considered the earliest</span>. The tenth mandala, a later addition, contains the famous <span class="highlight">Purushasukta</span>, explaining the origin of the four varnas (castes). The universally famous <span class="highlight">Gayatri mantra (Savitri)</span> is in the Rg-Veda. There are five divisions of Rg-Veda: <span class="highlight">Sakala, Baskala, Asvalayana, Sankhayana and Mandukya</span>. The total mantras are <span class="highlight">10,600</span>.</p>
+                                </div>
+                                <div class="image-container">
+                                    <img src="https://www.dnaofhinduism.com/wp-content/uploads/2022/10/rig-veda.jpg" alt="Ancient Vedic manuscript" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/FBF5E9/4A2E2A?text=Rigveda+Manuscript';">
+                                </div>
+                            </div>
+
+                            <!-- Samaveda -->
+                            <div class="card grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                                 <div class="image-container md:order-last">
+                                    <img src="https://culturalsamvaad.com/wp-content/uploads/2021/04/Samaveda-an-introductory-note-Culturalsamvaad.jpg" alt="Samaveda manuscript" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/FBF5E9/4A2E2A?text=Samaveda+Manuscript';">
+                                </div>
+                                <div class="md:col-span-2">
+                                    <h3 class="text-2xl font-bold header-font text-[#8B4513]">2. Samaveda (Book of Melodies)</h3>
+                                    <p class="mt-2 text-justify">Derived from the root <span class="highlight">saman ('melody')</span>, this Veda is a 'collection of melodies'. It consists of <span class="highlight">1603 verses (with all but 75 borrowed from the Rg-Veda)</span>, which were meant to be sung at the time of the <span class="highlight">Soma sacrifice</span>. The Samaveda is important in tracing the history of Indian music.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Yajurveda -->
+                            <div class="card grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                                <div class="md:col-span-2">
+                                    <h3 class="text-2xl font-bold header-font text-[#8B4513]">3. Yajurveda (Book of Sacrificial Prayers)</h3>
+                                    <p class="mt-2 text-justify">The Yajurveda is the book of the <span class="highlight">Adhvaryu priests</span>, prescribing procedures for performing sacrifices. It has two main texts: <span class="highlight">Sukla Yajurveda (or Vajasaneyi)</span> and <span class="highlight">Krsna-Yajurveda</span>. It contains short magic spells used by priests during sacrifices. The grammarian <span class="highlight">Patanjali refers to 101 schools of Yajurveda</span>.</p>
+                                </div>
+                                 <div class="image-container">
+                                    <img src="https://culturalsamvaad.com/wp-content/uploads/2021/04/Yajurveda-an-introductory-note-Culturalsamvaad.jpg" alt="Yajurveda manuscript" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/FBF5E9/4A2E2A?text=Yajurveda+Manuscript';">
+                                </div>
+                            </div>
+
+                            <!-- Atharvaveda -->
+                            <div class="card grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                                <div class="image-container md:order-last">
+                                    <img src="https://1.bp.blogspot.com/-E1s30nC4R70/Yqg-1r4uYgI/AAAAAAAAhp8/R4lVf6QW1y4w5G4E9eF2oJ0e1a1wX2zQCLcBGAsYHQ/s500/atharvaveda-sacred-quotes-in-hindi.webp" alt="Atharvaveda manuscript" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/FBF5E9/4A2E2A?text=Atharvaveda+Manuscript';">
+                                </div>
+                                <div class="md:col-span-2">
+                                    <h3 class="text-2xl font-bold header-font text-[#8B4513]">4. Atharvaveda (Book of Spells & Charms)</h3>
+                                    <p class="mt-2 text-justify">Entirely different from the other three, the Atharvaveda is the <span class="highlight">latest of the four</span> and for a long time was not included as a Veda. It describes the <span class="highlight">popular beliefs and superstitions</span> of the humble folk, with hymns used to ward off evil spirits. It is divided into <span class="highlight">20 kandas</span>, has <span class="highlight">711 hymns</span>, and a collection of <span class="highlight">5987 mantras</span>. Its two divisions are <span class="highlight">Paippalada and Saunakiya</span>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="section-divider"></div>
+
+                    <!-- The Brahmanas, Aranyakas -->
+                    <section>
+                         <h2 class="text-4xl font-bold header-font text-center mb-8 text-[#8B4513]">Commentaries & Philosophy</h2>
+                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                             <!-- The Brahmanas -->
+                             <div class="card flex flex-col">
+                                 <h3 class="text-2xl font-bold header-font text-[#8B4513]">The Brahmanas (Ritual Texts)</h3>
+                                 <p class="mt-2 flex-grow text-justify">The Brahmanas explain the hymns of the Vedas. They are <span class="highlight">written in prose</span> and elaborately describe sacrifices and their mystic meanings. The Rg-Veda has the <span class="highlight">Aitareya and Kausitaki Brahmanas</span>, composed by Hotri-priests. The Sukla Yajurveda is appended with the <span class="highlight">Satapatha Brahmana</span> ('one hundred sacred paths'), which is the <span class="highlight">most exhaustive and important of all</span>. The Atharvaveda has the <span class="highlight">Gopatha Brahmana</span>.</p>
+                             </div>
+                             <!-- The Aranyakas -->
+                             <div class="card flex flex-col">
+                                 <h3 class="text-2xl font-bold header-font text-[#8B4513]">The Aranyakas (Forest Books)</h3>
+                                 <p class="mt-2 flex-grow text-justify">The word Aranyaka means <span class="highlight">'the forest'</span>. These 'forest books' were for hermits and students in the jungles and are concluding portions of the Brahmanas. They were to be studied in the forest under a strict code of secrecy. Dealing with mysticism and symbolism, they offer the bridge between <span class="highlight">Karma marga (way of deeds)</span> and the <span class="highlight">jnana marga (way of knowledge)</span>.</p>
+                             </div>
+                         </div>
+                    </section>
+                    
+                    <div class="section-divider"></div>
+
+                    <!-- The Upanishads Section -->
+                    <section>
+                        <h2 class="text-4xl font-bold header-font text-center mb-8 text-[#8B4513]">The Upanishads: The Vedanta</h2>
+                        <div class="card grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                            <div class="image-container">
+                                <img src="https://images.unsplash.com/photo-1541883360363-2a62c6e6191b?q=80&w=1920&auto=format&fit=crop" alt="Guru teaching a disciple" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/FBF5E9/4A2E2A?text=Guru+and+Disciple';">
+                            </div>
+                            <div class="md:col-span-2 space-y-4 text-justify">
+                                <p>The word <span class="highlight">Upanishad</span> has been derived from the root <span class="highlight">Upa-ni-sad</span> that means 'to sit down near someone'. It denotes a student sitting under the feet of his guru to learn. Eventually the word began to be used for the <span class="highlight">secret knowledge</span> imparted by the guru to his selected pupils. Today the word is associated with philosophical knowledge and spiritual learning. Upanishads are also called <span class="highlight">Vedanta</span> (the end of the Veda) firstly, because they denote the last phase of the Vedic period and secondly, because they reveal the final aim of the Veda. Our nation's motto <span class="highlight">Satyameva jayate</span> is taken from the <span class="highlight">Mundakopanishad</span>.</p>
+                                <p>In fact, the Upanishads are the culmination of ancient Indian philosophical ideas. The whole of later philosophy of India is rooted in the Upanishads. The philosophical principles of Sankara, Ramanuja, Ramakrishna Paramahans, Aurobindo and others are derived from Upanishads. There are <span class="highlight">108 Upanishads</span> classified according to the Vedas, and were composed by several learned saints between <span class="highlight">800 BC and 500 BC</span>. Some of the most renowned Upanishads are <span class="highlight">Aitareya, Kausitaki, Taittariya, Brhadaranyaka, Chhandogya and Kena</span>. All these are older than Buddha and Panini. Among the later Upanishads mention may be made of <span class="highlight">Katha, Svetashvatara, Isa, Maitrayaniya</span> etc., which lay stress on Samkhya and Yoga doctrines. The language of these Upanishads is <span class="highlight">classical Sanskrit</span> and not the Vedic Sanskrit.</p>
+                                <p>Like Aranyakas, the Upanishads also give less importance to ceremonies and sacrifices. They discuss various theories on the creation of the Universe and define the doctrine of <span class="highlight">Karma</span> (action). <span class="highlight">Brahman (God) and atman (soul)</span> are treated as identical. They profess the goal of life to be-to attain <span class="highlight">moksha</span> (salvation) which is possible through meditation and self-control.</p>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <div class="card mt-8">
+                         <p class="text-lg text-justify leading-relaxed">All the works referred to above are also called <span class="highlight">Sruti</span> which means '<span class="highlight">revelation</span>'. Literally speaking Sruti means '<span class="highlight">heard</span>'. The Vedas are not the outcome of logical interpretation, not a historical anecdote, but they are Divine revelations. The Vedic literature enjoys the status of the foremost authority in all religious matters for the Hindus.</p>
+                    </div>
+
+
+                    <div class="section-divider"></div>
+
+                    <!-- Auxiliary Treatises Section -->
+                    <section>
+                        <h2 class="text-4xl font-bold header-font text-center mb-8 text-[#8B4513]">Auxiliary Literature</h2>
+                        <p class="text-center text-lg max-w-3xl mx-auto mb-10"><span class="highlight">Smritis</span> are the auxiliary treatises of the Vedas and are the law books of Indian society. Literally '<span class="highlight">Smrti</span>' means '<span class="highlight">to remember</span>' and these are regarded, as a part of the revelation though not included in the Vedic literature proper.</p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <!-- Vedangas -->
+                            <div class="card">
+                                <h3 class="text-2xl font-bold header-font text-[#8B4513]">The Six Vedangas (Limbs of Veda)</h3>
+                                <ul class="mt-4 space-y-2">
+                                    <li><span class="highlight">Siksha</span>: deals with pronunciation.</li>
+                                    <li><span class="highlight">Kalpa</span>: deals with rituals.</li>
+                                    <li><span class="highlight">Vyakarana</span>: deals with grammar.</li>
+                                    <li><span class="highlight">Nirukta</span>: deals with etymology.</li>
+                                    <li><span class="highlight">Chhanda</span>: deals with meter.</li>
+                                    <li><span class="highlight">Jyotisa</span>: deals with astrosciences.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Darshanas -->
+                            <div class="card">
+                                <h3 class="text-2xl font-bold header-font text-[#8B4513]">The Six Darshanas (Schools of Philosophy)</h3>
+                                 <p class="mt-2">Similarly, there are six schools of Indian philosophy known as <span class="highlight">Shad-Darshana</span>. These are written in <span class="highlight">Sutra</span> (aphorism) style, which are short, to the point and without doubts.</p>
+                                <ul class="mt-2 space-y-2">
+                                    <li><span class="highlight">Nyaya Darshana</span> by Gautama</li>
+                                    <li><span class="highlight">Vaishesika Darshana</span> by Kanada</li>
+                                    <li><span class="highlight">Sankhya</span> by Kapila</li>
+                                    <li><span class="highlight">Yoga</span> by Patanjali</li>
+                                    <li><span class="highlight">Purvamimansa Darshana</span> by Jaimini</li>
+                                    <li><span class="highlight">Uttaramimansa Darshana</span> by Bhadarayana</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Upavedas -->
+                        <div class="card mt-8">
+                            <h3 class="text-2xl font-bold header-font text-[#8B4513]">The Four Upavedas (Applied Knowledge)</h3>
+                            <p class="mt-2">Both the Vedangas and the Darshanas claim to have derived inspiration from the Vedas the explain the Vedic Philosophy. Still they are not included in the umbrella of core Vedic literature. In the same manner, four Upavedas namely <span class="highlight">Dhanurveda</span> (deals with the art of warfare), the <span class="highlight">Gandharvaveda</span> (deals with the music), <span class="highlight">Silpaveda</span> (deals with are and architecture) and <span class="highlight">Ayurveda</span> (deals with medicine) also do not form part of the Vedic literature though they enjoy great sanctity.</p>
+                        </div>
+                    </section>
+                    
+                    <div class="section-divider"></div>
+
+                    <!-- Legacy Section -->
+                    <section class="decorative-border p-6 md:p-8">
+                         <h2 class="text-3xl font-bold header-font text-center mb-4 text-[#8B4513]">Legacy of the Vedas</h2>
+                         <p class="text-lg text-justify leading-relaxed">The Vedic texts have been nourished, simplified and continued from one generation to the next through the <span class="highlight">Sruti parampara</span> by the great saint scholars and sages, to name a few <span class="highlight">Sri Sankaracarya, Caitanya Mahaprabhu, Madhvacharya and Ramanuja</span>. The Vedas are the treasure housed of knowledge not merely spiritual, but scientific, cultural and material. A fresh look at them, overcoming the hitherto laden emphasis on their religiosity would render that wisdom to us.</p>
+                    </section>
+
+                    <div class="section-divider"></div>
+
+                    <!-- Mind in Psychology Section -->
+                    <section>
+                        <h2 class="text-4xl font-bold header-font text-center mb-8 text-[#8B4513]">Concept of the Mind in Psychology</h2>
+                        <div class="card grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                            <div class="image-container">
+                                <img src="https://placehold.co/600x400/FBF5E9/4A2E2A?text=The+Human+Mind" alt="Representation of the human mind" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/FBF5E9/4A2E2A?text=The+Human+Mind';">
+                            </div>
+                            <div class="md:col-span-2 space-y-4 text-justify">
+                                <p>In the 18th century, psychologists used the <span class="highlight">introspective method</span> to observe the mind, but it was not reliable for building a general model. So unobservable mental concepts were put aside during the <span class="highlight">behaviorist period</span>, which focused only on observable behavior. They focused on observable behavior and ignored the mind, but behavior is different from person to person. That's why this method was rejected.</p>
+                                <p>Then, <span class="highlight">cognitive psychology</span> came into existence, studying the mind using experiments. There are two methods:
+                                </p><ul class="list-disc ml-6">
+                                    <li>Mind as <span class="highlight">information processing</span> - that is <span class="highlight">cognitive science</span>.</li>
+                                    <li>Mind connected to brain - that is <span class="highlight">neuroscience</span>.</li>
+                                </ul>
+                                
+                                <h3 class="text-2xl font-bold header-font text-[#8B4513] mt-6">Functions of Cognitive Models</h3>
+                                <p>Cognitive psychology studied how stimuli lead to responses. They found the mind processes information like <span class="highlight">attention, making decisions, recognizing differences</span>.</p>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <div class="card mt-8">
+                         <p class="text-lg text-justify leading-relaxed">The mind processes information in steps like <span class="highlight">senses, sensory memory, short-term memory, long-term memory, and responses</span>. There are two types of processes: <span class="highlight">Automatic shallow processing</span> in the unconscious mind, and <span class="highlight">deep awareness</span> and emotion.</p>
+                    </div>
+
+
+                    <div class="section-divider"></div>
+
+                    <!-- Cognitive Theory and Emotion Section -->
+                    <section>
+                        <h2 class="text-4xl font-bold header-font text-center mb-8 text-[#8B4513]">Cognitive Theory and Emotion</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
+                            <!-- Content for this section -->
+                            <div class="card">
+                                <p class="text-lg text-justify">In cognitive theory, some argue emotions depend on <span class="highlight">cognitive evaluations</span>, in attributing a meaning to events. On the other side, cognitive evaluation depends on deeper interior undertones of conscious affect, which are more powerful contributors to mental behavior than cognitive thinking.</p>
+                                <p class="mt-4 text-lg text-justify">The inner region of the mind includes <span class="highlight">emotions, feelings, intuitions, and inner sense of self</span>, which are important for <span class="highlight">decision making, learning, and motivation</span>.</p>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <div class="section-divider"></div>
+
+                    <!-- Summary Section -->
+                    <section class="decorative-border p-6 md:p-8">
+                         <h2 class="text-3xl font-bold header-font text-center mb-4 text-[#8B4513]">Summary</h2>
+                         <p class="text-lg text-justify leading-relaxed">In short, the mind works at many levels, from automatic actions to deep yearnings. Our thoughts help us to learn and grow. </p>
+                    </section>
+
+                    <div class="section-divider"></div>
+                    
+                    <section>
+                        <h2 class="text-4xl font-bold header-font text-center mb-8 text-[#8B4513]">The Vedic Model of Mind</h2>
+                        <div class="card space-y-6 text-justify">
+                            <p>The Vedic model of the mind explains the relationship between <span class="highlight">Prakriti</span> (nature) and <span class="highlight">Purusha</span> (the self). From this relationship, various mental and physical components emerge.</p>
+                            
+                            <h3 class="text-2xl font-bold header-font text-[#8B4513] mt-6">Hierarchy of Consciousness</h3>
+                            <ul class="list-disc ml-6 space-y-2">
+                                <li><strong><span class="highlight">Mahat</span></strong>: Represents feelings.</li>
+                                <li><strong><span class="highlight">Ahamkar</span></strong>: Represents decision-making.</li>
+                                <li><strong><span class="highlight">Manas</span></strong>: Represents the mind and thinking.</li>
+                                <li><strong><span class="highlight">Jnanendriyas</span> & <span class="highlight">Karmendriyas</span></strong>: The organs of knowledge and action.</li>
+                            </ul>
+                            
+                            <h3 class="text-2xl font-bold header-font text-[#8B4513] mt-6">Qualities of Ahamkar</h3>
+                            <ul class="list-disc ml-6 space-y-2">
+                                <li><strong><span class="highlight">Sattva</span></strong>: Good decisions, pure mind.</li>
+                                <li><strong><span class="highlight">Rajas</span></strong>: A mixture of Sattva and Tamas.</li>
+                                <li><strong><span class="highlight">Tamas</span></strong>: Inactive mind, anger issues, laziness.</li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <div class="section-divider"></div>
+                    
+                    <section>
+                        <h2 class="text-4xl font-bold header-font text-center mb-8 text-[#8B4513]">Cosmic Elements</h2>
+                        <div class="card grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h3 class="text-2xl font-bold header-font text-[#8B4513]">Gross Elements (<span class="highlight">Mahabhutas</span>)</h3>
+                                <ul class="list-disc ml-6 space-y-2 mt-2">
+                                    <li>Space (Ether)</li>
+                                    <li>Air</li>
+                                    <li>Fire</li>
+                                    <li>Water</li>
+                                    <li>Earth</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold header-font text-[#8B4513]">Subtle Elements (<span class="highlight">Tanmatras</span>)</h3>
+                                <ul class="list-disc ml-6 space-y-2 mt-2">
+                                    <li>Sound</li>
+                                    <li>Touch</li>
+                                    <li>Sight</li>
+                                    <li>Taste</li>
+                                    <li>Smell</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <div class="section-divider"></div>
+                    
+                    <section>
+                        <h2 class="text-4xl font-bold header-font text-center mb-8 text-[#8B4513]">Organs and Energies</h2>
+                        <div class="card grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h3 class="text-2xl font-bold header-font text-[#8B4513]">Jnanendriyas and Karmendriyas</h3>
+                                <div class="grid grid-cols-2 gap-4 mt-4">
+                                    <div>
+                                        <h4 class="text-lg font-bold">Jnanendriyas (Sense Organs)</h4>
+                                        <ul class="list-disc ml-4 space-y-1">
+                                            <li>Ear</li>
+                                            <li>Skin</li>
+                                            <li>Eye</li>
+                                            <li>Tongue</li>
+                                            <li>Nose</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-bold">Karmendriyas (Action Organs)</h4>
+                                        <ul class="list-disc ml-4 space-y-1">
+                                            <li>Speech</li>
+                                            <li>Hands</li>
+                                            <li>Feet</li>
+                                            <li>Bowel</li>
+                                            <li>Genitals</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold header-font text-[#8B4513]">Five Energies in the Body</h3>
+                                <p class="mt-4">Our body is made up of these five energies:</p>
+                                <ul class="list-disc ml-6 space-y-2">
+                                    <li><span class="highlight">Prana</span></li>
+                                    <li><span class="highlight">Apana</span></li>
+                                    <li><span class="highlight">Udana</span></li>
+                                    <li><span class="highlight">Vyana</span></li>
+                                    <li><span class="highlight">Samana</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+     
+                    <div class="section-divider"></div>
+
+                    <!-- The Vedic Levels of Mind -->
+                    <section>
+                        <h2 class="text-4xl font-bold header-font text-center mb-8 text-[#8B4513]">The Vedic Levels of Mind (The Koshas)</h2>
+                        <div class="card space-y-4">
+                            <p class="text-lg text-justify">In the Vedas, it is said that our mind is covered by five <span class="highlight">Koshas</span>. These are five levels of mind, which are called <span class="highlight">sheaths</span> or <span class="highlight">layers</span>.</p>
+                            
+                            <h3 class="text-2xl font-bold header-font text-[#8B4513] mt-6">The Five Koshas</h3>
+                            <div class="space-y-6 text-justify">
+                                <p><strong><span class="highlight">Annamaya Kosha</span></strong>: The most expressed and grossest sheath associated with the physical form. It is the body made of food and is considered matter stuff, related to sensory experiences.</p>
+                                <p><strong><span class="highlight">Pranamaya Kosha</span></strong>: Non-physical, associated with vital breath and energy. It has an inward and outward pulsation and connects universal energy to individual energy. It represents subtle matter.</p>
+                                <p><strong><span class="highlight">Manomaya Kosha</span></strong>: Associated with the thinking mind and mental impressions. Intelligence is expressed in the form of thoughts. This is where the mind stuff resides.</p>
+                                <p><strong><span class="highlight">Vijnanamaya</span> or <span class="highlight">Gyanamaya Kosha</span></strong>: Associated with knowledge, wisdom, and intelligence. It helps in understanding and differentiating subtle things. It represents intelligence stuff and helps us experience the duality of a subjective mind and an objective mind, as well as the temporary and the permanent.</p>
+                                <p><strong><span class="highlight">Anandamaya Kosha</span></strong>: The innermost level. It is a balanced state of the three fundamental qualities (<span class="highlight">gunas</span>): <span class="highlight">sattva</span>, <span class="highlight">rajas</span>, and <span class="highlight">tamas</span>. Associated with a blissful body, peace, and pure consciousness. It connects ourselves with the universal self, which is <span class="highlight">Purusha</span>.</p>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <div class="section-divider"></div>
+
+                    <!-- Sankhya Philosophy -->
+                    <section>
+                        <h2 class="text-4xl font-bold header-font text-center mb-8 text-[#8B4513]">25 Levels in Sankhya Philosophy</h2>
+                        <div class="card grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <p class="font-semibold text-lg mb-2">The Sankhya philosophy explains 25 levels of our body and mind:</p>
+                                <ul class="list-disc ml-6 space-y-1">
+                                    <li>5 Gross Elements (<span class="highlight">Mahabhutas</span>)</li>
+                                    <li>5 Subtle Elements (<span class="highlight">Tanmatras</span>)</li>
+                                    <li>5 Action Organs (<span class="highlight">Karmendriyas</span>)</li>
+                                    <li>5 Sense Organs (<span class="highlight">Jnanendriyas</span>)</li>
+                                    <li><span class="highlight">Manas</span> (Thinking)</li>
+                                    <li><span class="highlight">Mahat</span> (Intellect)</li>
+                                    <li><span class="highlight">Ahamkar</span> (Ego)</li>
+                                    <li><span class="highlight">Prakriti</span> (Universal Nature)</li>
+                                    <li><span class="highlight">Purusha</span> (Pure Consciousness)</li>
+                                </ul>
+                            </div>
+                            <div class="image-container">
+                                <img src="https://placehold.co/600x400/FBF5E9/4A2E2A?text=Sankhya+Levels" alt="Sankhya philosophy diagram" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/FBF5E9/4A2E2A?text=Sankhya+Levels';">
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="section-divider"></div>
+
+                    <section>
+                        <h2 class="text-4xl font-bold header-font text-center mb-8 text-[#8B4513]">Mind According to Vedas</h2>
+                        <div class="card space-y-6 text-justify">
+                            <p>Modern psychology uses objective research to study sensory input in the brain, but it is hard to study deeper levels from the outside. We cannot understand such concepts without understanding our own <span class="highlight">consciousness</span>. All the researchers are shallow, not that much deeper to understand thoughts and senses.</p>
+
+                            <h3 class="text-2xl font-bold header-font text-[#8B4513] mt-6">Manas (Mind)</h3>
+                            <p>All inner subjective functions are controlled by the mind. The body is the physical system. The term mind is different from senses, intellect, and the individual self. <span class="highlight">Manas</span> refers to the cognitive level of thinking, analyzing, and reasoning. This thinking mind guides the senses and organs of action. There is a co-awareness between the thinking mind, directing the inputs of senses, directing the actions, organs and outer behavior.</p>
+                            <p>Sometimes we use the phrase "<span class="highlight">screen of the mind</span>" which is used to describe a part of the mental process. It unites perception, thoughts, feelings, and memories. This screen of the mind isn't responsible for dreams during sleep, which come from a deeper level of our mind. It is like our inner movie screen. When we see something, it remains in our memory and creates a clear picture in our mind. Then we can see them on the screen of the mind, and when we sleep, in our dreams.</p>
+                            
+                            <h3 class="text-2xl font-bold header-font text-[#8B4513] mt-6">Intellect (Buddhi)</h3>
+                            <p>The deeper decision-making and problem-solving function is associated with the term <span class="highlight">intellect</span>, also called <span class="highlight">Buddhi</span>. The deeper discriminative functions of the intellect become active and extend into a deeper level when a more profound level of the thinking mind works on solving problems and taking decisions. It also helps us to understand what is right and what is wrong.</p>
+
+                            <h3 class="text-2xl font-bold header-font text-[#8B4513] mt-6">Discrimination</h3>
+                            <p>The mind has two parts: <span class="highlight">dividing</span> and <span class="highlight">unifying</span>.</p>
+                            <ul class="list-disc ml-6 space-y-2">
+                                <li><p class="font-semibold">Dividing:</p> means separating and analyzing ideas, concepts, and categories. This function is associated with the thinking mind and is linked to <span class="highlight">Manas</span>, breaking things into categories and analyzing differences. For example, if there are two colors, red and green, understanding them as two different colors.</li>
+                                <li><p class="font-semibold">Unifying:</p> means bringing things together into a whole, forming new models and world views. This function is associated with the feeling mind and is linked to <span class="highlight">Ahamkara</span>, bringing things together and seeing connections to create new ideas and models. For example, considering red and green as colors (a group of colors).</li>
+                            </ul>
+
+                            <h3 class="text-2xl font-bold header-font text-[#8B4513] mt-6">Ahamkara (Deciding & Feeling)</h3>
+                            <p>This is the sense of "<span class="highlight">I</span>" or <span class="highlight">Ego</span>. Thinking processes are underlain by deciding and feeling. This even deeper level, combining decision-making powers and feelings, can be associated with the process of discrimination. It also includes fine feelings from the heart (psychological heart), which gives us the energy and will to act. It also expresses mental intentions. This function helps us to think clearly and precisely, so we can find subtle differences between things. The feeling function helps us to integrate, harmonize, and unite different ideas and feelings.</p>
+                            <p><span class="highlight">Manas</span> (the thinking faculty) is about setting boundaries, clarifying, separating, and specifying differences, creating categories, dividing and restricting. And the intellect (the feeling faculty) is about uniting, harmonizing, integrating, and making connections, making a sense of the whole rather than focusing on differences.</p>
+
+                            <h3 class="text-2xl font-bold header-font text-[#8B4513] mt-6">Individual Being (Mahat)</h3>
+                            <p><span class="highlight">Mahat</span> is your individual self. It is associated with uniting the self into a whole and separating it from everything else. It is connected to the mind, intellect, and senses. In Sankhya philosophy, the subtlest impulse of nature becomes <span class="highlight">Mahat</span> and <span class="highlight">Ahamkara</span>. This level integrates the senses, mind, and intellect into a unitary individual experience.</p>
+                            <p>It is the deep feeling, "I feel, I think, I perceive, I act." Here, "I" focuses on three levels: thinking, feeling, and self-ego. The levels are different from each other but interconnected. Ego is not about selfishness or arrogance; it is about the feeling of being a separate person. When you say "I," it means you pull inward (to connect, love, help, and unite) or push outward (to separate, fear, and reject). It causes either giving or taking, attachment or non-attachment, love or fear, connection or separation. So all your feelings, actions, and being an individual come from these two forces. The desire to unite with everything and the desire to remain separate from everything—all your life experiences are the results of these two forces.</p>
+                            
+                            <h3 class="text-2xl font-bold header-font text-[#8B4513] mt-6">The Individual Soul (Jiva)</h3>
+                            <p>The inner organs of action, senses, thinking mind, intellect, ego, and consciousness together form the individual soul, or <span class="highlight">Jiva</span>. This Jiva can never be destroyed; it can reach a higher universal level when fully developed. The infinite self (which means <span class="highlight">Purusha</span> and <span class="highlight">Prakriti</span>) expresses themselves as many individual selves (which means <span class="highlight">Jiva</span>). These Jiva can be further expressed via additional initiations into other levels of the inner dimensions, which are intellect, mind, and senses.</p>
+                            <p>The process now reaches the level of discrimination of the self (that means <span class="highlight">Ahamkara</span>), passes through the observer <span class="highlight">Manas</span> (the thinking faculty), and involves the process of observations conducted by the senses and the objects of the senses. Then the organs of action act on the qualities like <span class="highlight">sattva</span>, <span class="highlight">rajas</span>, and <span class="highlight">tamas</span>, which also play an important role in this whole process of the creation, maintenance, and destruction of the universe and our body.</p>
+                        </div>
+                    </section>
+
+                    <div class="section-divider"></div>
+            
+                    <section>
+                        <h2 class="text-4xl font-bold header-font text-center mb-8 text-[#8B4513]">Mind According to Bhagavad Gita</h2>
+                        <div class="card space-y-6 text-justify">
+                            <p>The mind is where <span class="highlight">feelings</span> happen. Feelings are higher than <span class="highlight">senses</span>, but our senses control our feelings. So for a successful spiritual experience, the senses must be subdued and our feelings must be sufficiently good and strong.</p>
+                            <p>We can control our restless and uncontrollable mind through <span class="highlight">spiritual practice</span>. According to the 6th chapter, Lord <span class="highlight">Krishna</span> gives an explanation about the methods to control the mind.</p>
+                            <p>In the <span class="highlight">33rd and 34th shlokas of chapter 6</span>, <span class="highlight">Arjuna</span> asked <span class="highlight">Shree Krishna</span> that the mind is like a wind which is hard to control. He asked him to explain how we can control such a restless and uncontrollable mind. Shree Krishna gives Arjuna the tools and techniques to control the mind. In this chapter, he said it is the tendency of the mind that it is always restless and uncontrollable. We should work hard on <span class="highlight">practice (abhyasa)</span> and <span class="highlight">non-attachment (Vairagya)</span>. Practice means regular efforts to bring the mind back to the focus, and non-attachment means not getting emotionally tied to desires and outcomes.</p>
+                            
+                            <h3 class="text-2xl font-bold header-font text-[#8B4513] mt-6">Why we can't control our mind?</h3>
+                            <p>We have become a <span class="highlight">slave of our mind</span>. We are unable to change our old habits. Regular practice leads to drawing it towards someone who is in peace, and that is the goal. We also need to control our mind from running after those objects to which it has been attached.</p>
+
+                            <h3 class="text-2xl font-bold header-font text-[#8B4513] mt-6">What should we do to control our mind?</h3>
+                            <p>We should follow the another way Shree Krishna suggested, which is <span class="highlight">non-attachment</span>. Tell your mind that you are the <span class="highlight">soul</span> and at the top level and you are the boss.</p>
+                            <p>Such attachments to the objects which give temporary happiness are the evils, and your mind always wanders around such evil objects. So ask your mind to remain unattached to such worldly objects and become <span class="highlight">still</span>. Such attachments give more pain than pleasure.</p>
+
+                            <h3 class="text-2xl font-bold header-font text-[#8B4513] mt-6">Is there any any sulattan not based on selfishness?</h3>
+                            <p>Remind your mind about all the <span class="highlight">sufferings</span> you get due to attachment. Slowly, slowly try to regain your mind from attachments. With regular practice, after some time your mind will surely feel free from attachments, and then it becomes easy to control the mind.</p>
+                        </div>
+                    </section>
+
+                    <div class="section-divider"></div>
+
+                    <section>
+                        <h2 class="text-4xl font-bold header-font text-center mb-8 text-[#8B4513]">Essential Nature of The Human Mind</h2>
+                        <div class="card space-y-6 text-justify">
+                            <p>As mentioned in the <span class="highlight">1st shloka of chapter 7</span>, the mind is referred to as the <span class="highlight">sixth sense</span>. It is a person's faculty of thoughts and his ability to remember things. The mind is the center of ideas, opinions, perceptions, emotions, will, etc. One's thoughts are rooted in his past experience and likely future events. The mind can make or break a person. It has power whether for good or evil; it can help us to progress or cause our downfall. It is restless and always running after one or another object. So in this chapter, it is compared with a <span class="highlight">drunk monkey</span>.</p>
+                            <p>As stated in shloka <span class="highlight">7.4 and 7.5</span>, the mind belongs to the material and not to consciousness. According to shloka <span class="highlight">13.1 to 13.7</span>, the mind is like the field of activities; all changes like birth, growth, and death take place in this field. It is the doer of all activities and the self (individual self) is the witness of all such activities. Thus, it belongs to material nature, not pure consciousness. The mind is above the senses but below intelligence and the self. The nature of the mind has been described by <span class="highlight">Arjuna</span> in shloka <span class="highlight">6.33 to 6.34</span> as unsteady, restless, turbulent, unpredictable, variable and difficult to control.</p>
+                            <p>The mind connects with the outside world through the senses. As stated in shloka <span class="highlight">2.67</span>, even one of the senses can carry away a person's wandering mind and intelligence if his mind is constantly engaged with that sense. Attachment with different sense objects creates a web of selfish desires in which the mind gets entangled, so it always remains restless. Even if the desires are fulfilled, one cannot get permanent happiness. New desires arise and prevent peace of mind. A continuously restless mind leads to misery, anger, etc. So many conflicts arising in the mind result in an unhealthy, confused, and disturbed mind. Due to this, fear, lust, greed arise, which create turbulence. In such a state, the mind cannot take the right decision at the right time. Engagement and attachment with the objects of the senses also cloud one's power of judgment.</p>
+                            <p>The mind holds on to its views even if they are wrong and harmful. According to Arjuna, the mind is hard to control, even harder than controlling the wind. He expressed his helplessness in managing emotions, but with <span class="highlight">practice (abhyasa)</span> and <span class="highlight">non-attachment (vairagya)</span>, it can be controlled. Instead of focusing on the outside world, the mind should be focused on the divine within.</p>
+                            <p>In shloka <span class="highlight">6.36</span>, Krishna stated it was not easy to attain evenness of mind for an undisciplined person. The one who is self-controlled and makes sincere efforts through the right means can attain it.</p>
+                        </div>
+                    </section>
+                    
+                    <div class="section-divider"></div>
+
+                    <section>
+                        <h2 class="text-4xl font-bold header-font text-center mb-8 text-[#8B4513]">The Mind is Fickle</h2>
+                        <div class="card space-y-6 text-justify">
+                            <p>The <span class="highlight">Bhagavad Gita</span> says self-realization and control over the mind is necessary, but it is not possible without the <span class="highlight">stability of the mind</span>. The mind is linked to the six senses and is fickle and unstable by nature. Stability means to remain calm in all situations, not getting overly happy or overly sad, staying focused and balanced. The stability of mind is necessary for inner peace, clarity, and spiritual growth.</p>
+                            <h3 class="text-2xl font-bold header-font text-[#8B4513] mt-6">Mind Needs to Be Stabilized</h3>
+                            <p>The state of the stability of mind is called "<span class="highlight">Sthitaprajna</span>". When a person gives up all his desires and thoughts, his inner self is satisfied with himself. He stays calm in happiness, fear, anger, emotions, lust, etc. He does not get disturbed by praise or blame, good or bad events. A person who is stable in mind does not get overly happy when desires are fulfilled or upset when unpleasant things happen. He remains blissful, disconnecting himself from all attachments and staying connected with the <span class="highlight">Supreme</span> within himself. Such a self is called a <span class="highlight">Yogi</span>.</p>
+                            <p>According to <span class="highlight">chapter 6</span>, for such a <span class="highlight">Sthitaprajna</span> who has controlled his mind, he has the best relation with the self, but at the same time, an uncontrollable mind is the enemy of the self. <span class="highlight">Sthitaprajna</span> remains stable in cold or heat, happiness or sorrow, respect or disrespect, and always enjoys the company of the Supreme. He gets the knowledge of wisdom. The pieces of gold or pebbles or stone are all equal for him. He is superior who maintains the same attitude towards his well-wishers, friends, enemies, relatives, saints, sinners, etc.</p>
+                            <p>Senses make the mind restless. Senses like eyes, ears, skin, nose, and tongue pull the mind towards the objects through desires. This constant craving for objects makes the mind restless and unstable. The Bhagavad Gita says if we control our mind through <span class="highlight">abhyasa</span> and <span class="highlight">vairagya</span>, the mind can be stable. For this, we should withdraw our senses completely from the objects, like a tortoise withdraws its limbs. This is the sign of self-mastery and self-control. Slowly, with practice, we can be able to control our mind and senses, so the disturbance in the mind reduces.</p>
+                            <p>The desires remain inside until we reach spiritual realization. Peace comes only with the spiritual experience. The wise man with <span class="highlight">discrimination</span> (the knowledge of right and wrong) can be disturbed by uncontrollable senses. Hence, controlling senses is essential to control the mind through which we can focus on the goal, the <span class="highlight">Supreme truth</span>. At that time, the mind becomes stable. Such a stable mind leads to peace, intelligence, and spiritual progress.</p>
+                        </div>
+                    </section>
+                    
+                    <div class="section-divider"></div>
+
+                    <section>
+                        <h2 class="text-4xl font-bold header-font text-center mb-8 text-[#8B4513]">Yoga Techniques to Stabilize the Mind</h2>
+                        <div class="card space-y-6 text-justify">
+                            <p>A Yogi should sit in a fixed place at a fixed time, alone, <span class="highlight">self-controlled, desireless</span>, without any sense of possessiveness. He should concentrate on his mind only. The place should be clean, and his asana should be covered with cloth, deer skin, or Kuska grass. The Asana should be neither too low nor too high. He should have <span class="highlight">single-pointed concentration</span>, keeping his mind and all sensory activities under firm control and in a straight position. He should sit in an erect posture with a peaceful mind, fearlessly practicing <span class="highlight">Brahmacharya</span> also. He should practice yoga for self-purification. His mind should be subdued and established in "Me" (Shree Krishna), considering "Me" (Shree Krishna) his ultimate goal. Practicing thus, by keeping and merging himself in "Me," a Yogi attains the highest peace and nirvana in this world.</p>
+                            <p>A Yogi should not eat too much or too less. He should not be an excessive sleeper or excessively sleepless. The Yogi who controls his diet, sleep, and recreation appropriately, and performs all his work, can see his sorrow reducing. His mind becomes disciplined. When a disciplined mind is established in the self, one can easily subdue all his desires. He becomes like a <span class="highlight">lamp in a windless place</span>. Nothing can disturb his controlled mind because now his mind is under the control of divine power and united with his inner self. At this state, the mind stops all its movements. It becomes quiet and stable.</p>
+                            <p>The state in which a person finds unlimited happiness is not dependent on external objects but comes from within. This happiness and peace are beyond the senses; it is an inner spiritual experience. The intellect of the Yogi understands the higher truth of existence, and once he is established in this truth, he remains steady and does not get affected by worldly ups and downs. In short, when the mind is stilled in yoga, restlessness stops, the lower self connects with the higher self, one feels deep, unlimited inner happiness which is permanent, and the intellect becomes more powerful and remains in truth. He becomes free from all the bondages and attains salvation.</p>
+                            <p>Concentrating the mind on the goal is the solution. In verses <span class="highlight">11.7 and 11.8</span>, Lord Krishna gives assurance, "I rescue them, O' Partha, whose minds are set upon Me, from the ocean of mortal samsara. Fix your mind on Me. Operate your intelligence, and then, without a doubt, you shall come to Me only." In <span class="highlight">chapter 17, verse 16</span>, the definition of the austerity of the mind is mental satisfaction, gentleness, silence, self-control, and purification of thoughts. These are called the <span class="highlight">austerity of the mind</span>.</p>
+                        </div>
+                    </section>
+
+                    <div class="section-divider"></div>
+
+                    <section>
+                        <h2 class="text-4xl font-bold header-font text-center mb-8 text-[#8B4513]">The Upanishadic Concept of Mind</h2>
+                        <div class="card space-y-6 text-justify">
+                            <p>Upanishads are ancient Indian spiritual texts. Hindu ideas and Western ideas about the mind are totally different, so a direct comparison is not possible. Hindu thoughts cannot be explained on the basis of suppositions or parallelism because they are based on <span class="highlight">pratyaksha</span>, which is totally different from others.</p>
+
+                            <p>The ideas and concepts of the mind are deeply rooted in the past, and all philosophical reflections are ultimately grounded in the Vedas and Upanishads. The Upanishads were composed about <span class="highlight">800 BC</span>. The Sanskrit term <span class="highlight">manas</span> refers to the mind. The word <span class="highlight">manas</span> is etymologically identical with the Latin word '<span class="highlight">Mens</span>'. It is not exactly the same as the English word mind; it has its own deep and unique meaning.</p>
+
+                            <p>The Upanishads used similes to explain how the mind works, especially during <span class="highlight">self-reflection</span>. Mind and <span class="highlight">prana</span> are interconnected. To explain this, the Upanishad uses the example of a <span class="highlight">bird tied to a string</span>. A bird flutters in all directions but finds no food. Like this, our mind is restless, always here and there and runs after desires, but always remains connected to <span class="highlight">prana</span>. Since the bird is tied, it must return to the same place. Likewise, the mind has to settle back at the source when it finds no stability elsewhere.</p>
+
+                            <p>To explain the origin of the mind, it emerges from the essence of food through subtle processes, just like the body. The Upanishads have given another simile, of churning milk to make butter. The origin of the mind is compared to the <span class="highlight">butter rising from the milk</span> during churning.</p>
+
+                            <p>The Upanishads use poetic and practical images to explain the mind's movements and sources. These similes used in Hindu texts are beautiful and helpful, but they do not fully explain the complete meaning of the mind in accordance with Hindu philosophy. They give clues, but there is a deeper, more complex understanding behind them.</p>
+
+                            <p>There is a classical conception in the <span class="highlight">Katha Upanishad</span> which is copied with modifications and mentioned in later literature, including Buddhist literature. It is compared with <span class="highlight">reins in a chariot</span>. The horses are the <span class="highlight">sense organs</span> called <span class="highlight">Indriyas</span>. The reins (mind) control the wild horses and also guide them. In Hinduism, the mind is not just a thinking faculty but a core part of the human experience deeply connected with senses, emotions, will, and creativity.</p>
+                        </div>
+                    </section>
+                    
+                    <div class="section-divider"></div>
+
+                    <section>
+                        <h2 class="text-4xl font-bold header-font text-center mb-8 text-[#8B4513]">Characteristics of the Mind</h2>
+                        <div class="card space-y-6 text-justify">
+                            <p>The mind is <span class="highlight">procurer (अवरोधिनीनी)</span>, which means it gathers all experiences and then acts vigorously, both in a restless state and in a waking state. It is restless, wandering, strong, stiff, and difficult to manage and control.</p>
+
+                            <p>According to Western views, thinking and meditating are the two main functions of the mind. However, Hindu views suggest this is just one part of what the mind does. In Hinduism, the mind is active, impulsive, and tied to desires and wishes.</p>
+
+                            <h3 class="text-2xl font-bold header-font text-[#8B4513] mt-6">Pure vs. Impure Mind</h3>
+                            <p>The mind is called pure or impure according to the domination and prevalence of one element at the expense of the other. A <span class="highlight">pure mind</span> is considered good and praiseworthy, disconnected from passion, softness, rashness, and desires. Such a calm mind is called a pure mind. An <span class="highlight">impure mind</span> is an example of emotions like anger and an aggressive element like desire, which is called <span class="highlight">Kama</span> in Sanskrit.</p>
+
+                            <p>The mind becomes aggressive or intense due to desires, which influence the mind, and sometimes the mind creates desires. The mind rushes and creates desires, and human behavior or emotions are heavily shaped by desires, either as cause or as effect. Simultaneously, the mind creates doubts, fears, sensory enjoyments, and dislikes, and the mind is responsible for initiating actions.</p>
+
+                            <p>It shows movement, energy, and runs. The mind is also responsible for the root of rebirth and the root of the Samsara tree. It is able to control <span class="highlight">Indriyas</span>, which means the inner power behind the senses, which is subtle. The <span class="highlight">Indriyas</span> are like untrained or trained horses full of energy. A wise person can control the urges residing behind the various senses by means of the mind, like a charioteer who controls horses.</p>
+
+                            <p>Such control is considered ideal and is praised both in Hinduism and in philosophies like <span class="highlight">Samkhya</span> or <span class="highlight">Stoicism</span>. Hindu thoughts emphasize that checking sense activities is not enough for perfection, because the mind possesses self-motion. It requires steadiness. Stopping the senses from the object is not the solution, but detaching from the desire behind them is necessary.</p>
+
+                            <p>Desires are connected with external goals that are obtained through specific sense organs. If these desires are dominant, the actions become false or misleading, and according to the <span class="highlight">Bhagavad Gita</span>, it leads to the ethical destruction of morality.</p>
+
+                            <p>Thus far, we have considered the mind in its more or less impure form. It is like a part of a psycho-physical system where the mind and body work together. The mind influences the sense organs to act, put effort, and make decisions. It is described as more than or higher than the senses. This is not only because the mind is subtle and immaterial, but mainly for the reason that it mediates the knowledge and understanding of the self, i.e., <span class="highlight">Atman</span>. After helping to relate to the <span class="highlight">Atman</span> through thought and reflection, the true self helps to gain meditative focus i.e., <span class="highlight">Dhyana</span>.</p>
+                        </div>
+                    </section>
+                    
+                    <div class="section-divider"></div>
+
+                    <section>
+                        <h2 class="text-4xl font-bold header-font text-center mb-8 text-[#8B4513]">Nature of Thoughts</h2>
+                        <div class="card space-y-6 text-justify">
+                            <p>The <span class="highlight">Kaushitaki Upanishad</span> conveys the impression that thoughts are an essential element, i.e., <span class="highlight">Bhuta</span>. Thoughts are not fixed; they have mobility and are always in motion.</p>
+
+                            <p>Desire is indirectly associated with thoughts and thinking in general. Even though the thought changes, the power remains. When we focus deeply on one desire, it becomes weak through <span class="highlight">Tapas</span> (effort), <span class="highlight">Medha</span> (intelligence), and <span class="highlight">Yoga</span> (concentration).</p>
+
+                            <p>Restless running after many objectives becomes calm and steady through <span class="highlight">Dhyana</span> (meditation). This state of the mind is called <span class="highlight">quiescence</span> (mental stability). The mind performs the duty of wishing, willing, and thinking, but a proper balance between them is necessary. The wise man who has achieved this balanced state and who remains the same—<span class="highlight">Sama</span>—in any situation does not get carried away by emotions and laziness.</p>
+
+                            <p>When he is in the state of <span class="highlight">Sama</span>, he is in the state of 'doing for the sake of doing nothing,' which means staying calm and doing nothing. This balance or harmony is better than extremes. The <span class="highlight">Bhagavad Gita</span> teaches us to develop this kind of calm and balanced mind.</p>
+
+                            <p>In Hindu thoughts, the mind has a thought and an objective side (like a sensation) and a subjective side (like thoughts and feelings) with active and passive principles, respectively. This means these two are not in conflict but work together as active (doing) and passive (receiving) faculties.</p>
+
+                            <p><span class="highlight">Indriyas</span> as the faculty of sensation, meditate on an external world through various sense organs. <span class="highlight">Indriyas</span> bring the outer world's data. Thoughts convert these inputs or sensations into perceptions. Western psychology separates sensation and thoughts, but Hindu thought sees ideas or perceptions as stable and sensations as constantly changing. The Upanishad's view is not just about thoughts and senses like wishing and thinking, but also about 'Citta'. <span class="highlight">Citta</span> has a special role in the mind. It is consciousness like the inner self or the storehouse of mental impressions. It has its own unique importance in understanding how the mind works. The mind can work properly only if it is balanced. The balance is between willing (desires) and thinking (reasoning). If there is not a balance between them, then:</p>
+
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>The mind loses its objectivity.</li>
+                                <li>It cannot connect inner thoughts with external facts, i.e., subjective with objective.</li>
+                                <li>The judgments and actions lose the proper meaning of truth.</li>
+                            </ul>
+
+                            <p>The text talks about <span class="highlight">manas</span>, which helps us to believe, to opine, and to hold. These are internal functions like deciding and believing something to be true. If the mind is cut off from external input, it can create opinions that may be wrong, uncertain, or harmful.</p>
+
+                            <p>Such an unbalanced mind makes assumptions and creates imaginations or false beliefs. Thus, the mind that only uses its own thoughts without facts can become confused or misleading.</p>
+                        </div>
+                    </section>
+     
+                    <div class="section-divider"></div>
+     
+                    <section>
+                        <h2 class="text-4xl font-bold header-font text-center mb-8 text-[#8B4513]">Practice of Mind Control</h2>
+                        <div class="card space-y-6 text-justify">
+                            <p>Mind control is hard but achievable. Our mind affects us more than anything else. We always struggle to control it. Those who have already achieved control over their mind can truly help us. We can learn some simple and practical methods to manage our mind better from them. It is a very interesting inner game. If you have a sports person's attitude, you can enjoy it even during tough times or failures. To play this game, you need skills, alertness, goodness of heart, strategy, patience, humorous spirit, and courage. These qualities help you to stay strong in the worst circumstances.</p>
+
+                            <p>Shree Krishna explains to Arjuna in the <span class="highlight">Bhagavad Gita</span> about the supreme state of yoga, which means unity and self-mastery. About this high goal, Arjuna says in sadness, "to perform this yoga, which is characterized by the perfect evenness of mind, is difficult because the mind is restless, turbulent, powerful, and obstinate." Connecting it feels as hard as controlling the wind.</p>
+                            
+                            <p>Shree Krishna listened to him and gave a reply important for all human beings of all times. He said, "Undoubtedly, O Arjuna, the mind is restless and hard to control, but by <span class="highlight">practice (Abhyasa)</span> and <span class="highlight">non-attachment (Vairagya)</span>, it can be controlled."</p>
+
+                            <p>From this conversation, we learn three basic things about mind control:
+                                <ol class="list-decimal list-inside space-y-2 mt-4">
+                                    <li>It has not always been an extremely difficult task, even for a person of Arjuna's stature.</li>
+                                    <li>It is possible to control the mind.</li>
+                                    <li>There are some well-defined methods of controlling the mind.</li>
+                                </ol>
+                            </p>
+                            
+                            <p>Shree Krishna gave the whole secret of controlling the mind: <span class="highlight">practice (Abhyasa-Yoga)</span> - training the mind again and again for the same thing, and <span class="highlight">detachment (Vairagya)</span> - not being emotionally attached to things. It is the uniform verdict of all the saints of India down the ages that there is no other way of controlling the mind except through true practice and detachment, which is also called <span class="highlight">Abhyasa Yoga</span> or the yoga of practice.</p>
+
+                            <h3 class="text-2xl font-bold header-font text-[#8B4513] mt-6">Dialogue between Shree Ramakrishna and a devotee</h3>
+                            <p>The story highlights the power of mental freedom and steady efforts. Shree Ramakrishna says, "Don't sit idle, don't stop, and don't become lazy because your spiritual consciousness has been awake a little. Keep moving, go forward. Beyond the forest of sandalwood, there are other and more valuable things, mines like silver mines, gold mines, and so on," which means there are higher truths beyond what you have seen. It is about deeper spiritual knowledge.</p>
+
+                            <p>The devotee says, "But our legs are in chains. We cannot go forward."</p>
+
+                            <p>Shree Ramakrishna replied, "What if the legs are chained? The important thing is the mind. Bondage is of the mind and freedom is also of the mind."</p>
+
+                            <p>The devotee says, "But the mind is not under my control."</p>
+
+                            <p>Shree Ramakrishna says, "How is that? There is such a thing as <span class="highlight">Abhyasa Yoga</span>, which means yoga through practice. Keep up the practice and you will find that your mind will follow in whatever direction you lead it. The mind is like a white cloth. If a person just returned from a sandy road and you dip it in red dye, it will be red. If you dip it in blue, it will be blue. It will have whatever color you dip it in."</p>
+
+                            <p><span class="highlight">Abhyasa</span> and <span class="highlight">Vairagya</span> are no doubt the entire secret of controlling the mind, but how do we bring them into our self-stream? It is very important. We shall have to develop a strong will to control our mind. For that, we have to understand the nature of the mind. We have to learn certain techniques and practice them earnestly and intelligently.</p>
+                        </div>
+                    </section> 
+                    
+                    <div class="section-divider"></div>
+
+                    <section>
+                        <h2 class="text-4xl font-bold header-font text-center mb-8 text-[#8B4513]">Control of the Subconscious Mind</h2>
+                        <div class="card space-y-6 text-justify">
+
+                            <h3 class="text-2xl font-bold header-font text-[#8B4513]">Conscious vs. Subconscious</h3>
+                            <p>It is hard to separate the conscious and subconscious parts of the mind, but for a practical understanding, one can separate them. Basically, the <span class="highlight">conscious mind</span> actively thinks and the <span class="highlight">subconscious mind</span> is hidden and automatic. The conscious mind decides and the subconscious mind stores deep habits and feelings.</p>
+                            <p>If you want to control the mind on a conscious level, the efforts should start from controlling the subconscious. The subconscious influences our conscious thoughts and actions. Sometimes we all experience the inner conflict: we know what is right, but most of the time we fail to do it. We know something is wrong, but still, we do it. We make good decisions, set strong goals, and try to improve. But before we are aware of it, like the sand castle before a tidal wave, they are washed away. We stand confused and frustrated. We always make resolutions with our conscious part of the mind because this is the part we are aware of, but we ourselves break our resolutions with another part, the subconscious mind, which we don't know well. It is an unenlightened region of our mind.</p>
+
+                            <h3 class="text-2xl font-bold header-font text-[#8B4513] mt-6">The Challenge of Resistance</h3>
+                            <p>When we seriously try to control our mind, we face inner struggles, but the more we try, the harder it feels. First, we may wonder and ask ourselves, "Why am I getting worse day by day?" That sense is taking the decision seriously, but the truth is ignored. When we try to control our conscious mind, we face resistance from our subconscious mind. This resistance comes from whatever we think and do—past impressions and tendencies. These old impressions are stored deep inside us and try to come back into our awareness. If they don't match our current thinking, they are inconsistent, and we feel inner conflict.</p>
+                            <p>The subconscious mind is like a cellar in a house. You don't know how much junk is there until you decide to clear it. As you begin, you are not sure what kind of things you will encounter. You face so many surprises and challenges. Soon, you get tired and leave the work unfinished. So it cannot become a clear and useful space. The same way, if we don't clear our subconscious mind, we cannot truly control our conscious thoughts. We must find ways of cleaning this dark region of the subconscious mind. But how can we do it?</p>
+
+                            <h3 class="text-2xl font-bold header-font text-[#8B4513] mt-6">Cleaning the Subconscious Mind</h3>
+                            <p>Suppose we want to clean an ink pot. How do we do it? We pour clean water into the pot. As the dry ink gets soaked, darker water comes out for some time, then less inky water comes out. At last, we don't find any traces of ink. Now, clean water poured into the pot causes clear water to come out of the pot. One of the ways of cleaning the subconscious mind is to pour holy thoughts into our mind and allow them to go deep down within ourselves. Holy thoughts are like pure water. We must not get frightened when we find dark water coming out. We must persist in pouring holy thoughts. A time will come when we shall find clear thoughts coming from within. This is how our subconscious mind can be cleared and controlled.</p>
+                            
+                            <h3 class="text-2xl font-bold header-font text-[#8B4513] mt-6">The Role of Karma and Spiritual Vision</h3>
+                            <p>We must not think that the subconscious mind is the storehouse of evil; it also stores our past good and noble deeds. It is a storage area of our experiences, beliefs, and feelings, which may be helpful or harmful in our efforts to control the mind. Our task should be to control and reduce harmful elements and utilize helpful elements. <span class="highlight">Shree Krishna</span> assured <span class="highlight">Arjuna</span> in the <span class="highlight">Bhagavad Gita</span> that the yogi who stays as he is by being born again for the good work is stored up, and in his next birth, he is inherited with the intelligence acquired in his previous body.</p>
+                            <p>This <span class="highlight">karma</span> can be a powerful, unknown factor in this life's attempts at mind control. If we want real and lasting control over our mind, we must work on transforming the subconscious mind. We are not working on the highest goal of life, experiencing the super-conscious state. We can never be the master of the mind. As a result, both the conscious and subconscious minds remain restless. Only the experience of the highest spiritual vision of God can remove attachments, fears, likes and dislikes, illusions, mental disturbances, and sufferings.</p>
+                        </div>
+                    </section>
+
+                    <div class="section-divider"></div>
+
+                    <section>
+                        <h2 class="text-4xl font-bold header-font text-center mb-8 text-[#8B4513]">Controlling the Mind</h2>
+                        <div class="card space-y-6 text-justify">
+                            
+                            <h3 class="text-2xl font-bold header-font text-[#8B4513]">The Three Levels of Mind</h3>
+                            <p>Controlling the mind involves understanding its three main levels:
+                                <ul class="list-disc list-inside space-y-2 mt-2">
+                                    <li>The <span class="highlight">subconscious mind</span>: Our deep inner habits and actions.</li>
+                                    <li>The <span class="highlight">conscious mind</span>: Our current thoughts and actions.</li>
+                                    <li>The <span class="highlight">superconscious mind</span>: Our highest spiritual potential.</li>
+                                </ul>
+                            </p>
+                            <p>Swami Vivekananda reminds us that this is a huge task. We cannot focus only on what we are consciously aware of; we must also deal with our deep inner self and aspire to the highest spiritual awareness.</p>
+
+                            <h3 class="text-2xl font-bold header-font text-[#8B4513] mt-6">The Unconscious and Its Influence</h3>
+                            <p>The real effort must begin with working on the vast subconscious. Practical psychology focuses on the unconscious mind first because it is a storehouse of countless old conscious thoughts and actions, those we have now forgotten. These old impressions and habits don't disappear but get covered; we don't see them or think of them, but they are still there. This is compared to items left in a pocket—we may forget about them, but they still exist.</p>
+                            <p>Some of these harmful impressions can slowly spoil or become worse if we don't deal with them. They affect both our good and bad actions without us even realizing it. The unconscious mind is a mixture of good and bad, but if these things are ignored for too long, some of them can be awakened and become harmful, just like a good seed left unattended. The unconscious mind causes many hidden problems in human life. The main goal is to attain self-awareness and control over the body and mind and all the automatic actions performed by inner organs within our bodies, such as the liver, which can be made to obey our commands.</p>
+
+                            <h3 class="text-2xl font-bold header-font text-[#8B4513] mt-6">The Journey to Superconsciousness</h3>
+                            <p>According to Swami Vivekananda, this is the first part of the study; there is more to do for spiritual development. The next step is to go beyond the conscious. Just as there is a world below consciousness (the unconscious), there is another world which is above consciousness (the superconscious state). When the superconscious state is achieved, a person becomes free and divine. Death turns into immortality, and one can overcome the fear and limitations of death. Weakness becomes power, and inner strength and spiritual energy increase. Bondages turn to liberty and freedom from all limitations. This state is described as infinity. The ultimate goal of human evolution, according to Vivekananda, is to achieve this state.</p>
+
+                            <h3 class="text-2xl font-bold header-font text-[#8B4513] mt-6">Yoga and Kundalini</h3>
+                            <p>To achieve this state, a yogi should do twofold work. First, he should learn how to control and work on the two energy channels in the body: <span class="highlight">Ida</span> and <span class="highlight">Pingala</span>. Ida is the left channel, and Pingala is the right channel. These are the two existing ordinary currents to control subconscious actions. Second, the yogi should learn to go beyond even consciousness towards a higher spiritual state. The true yogi, after a long practice of deep concentration, can attain the truth, and now the <span class="highlight">Sushumna</span> current opens. The Sushumna is a central channel in the spine that opens; it normally remains closed. Now a current finds its way into it and gradually moves upward. The spiritual energy also moves upward, passes through different chakra centers, and reaches the brain. The yogi becomes fully conscious of his true self, which is nothing but God himself.</p>
+                            <p>To awaken <span class="highlight">Kundalini</span> through Raj Yoga instead of Pranayama is the process which helps to focus the mind. However, Pranayama should be learned personally from a qualified teacher because it is very powerful and subtle. As it is not easy to find such expert teachers, one should practice it gradually. But those who are disciplined, have been there, and are lucky to find a good teacher can easily achieve the control over the mind. With the guidance of teachers and regular practice, he can awaken all internal energies. Many people who live a worldly life are not able to practice Pranayama regularly. They can grow spiritually by simple methods like meditating on "Om" with faith. This regular practice with full concentration awakens Kundalini or hidden spiritual power. Shree Ramakrishna taught that reading books alone won't awaken spiritual consciousness. One should also pray to God sincerely. In a restless position, for a short time, Kundalini was roused by God. A disciple asked Swami, "How can the Kundalini be roused?" Swami replied, "Some people recommend certain physical or yogic exercises, but I believe that it can be best achieved through the repetition of the divine name and meditation. It is the most easiest spiritual exercise." Meditation must be done with the repetition of the mantra (sacred words). Thus, by the spiritual disciplines on the part of the devotee—repetition of the divine names, prayers, and meditation—our spiritual potency is awakened. This awakened power takes care of the difficulties of the subconscious mind. No one should be despairing, thinking that because he is not able to practice Raj Yoga disciplines, his way to control the subconscious mind is closed. One can repeat the divine name and continue with his practice of Japam, he will definitely get success.</p>
+                        </div>
+                    </section>
+                </div>
+            </main>
+            
+            <!-- Footer -->
+            <footer class="full-width mt-12 py-6">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center text-sm text-[#4A2E2A]">
+                     <div>
+                        <span class="font-semibold">[Previous]</span>
+                        <span class="ml-4 font-semibold">[Next]</span>
+                     </div>
+                     <div class="text-right">
+                        <p class="font-semibold">📘 Notes compiled and visualized by Tushar Joshi</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const screenshotInput = document.getElementById('screenshotInput');
+            const confirmButton = document.getElementById('confirmButton');
+            const fileStatus = document.getElementById('fileStatus');
+
+            screenshotInput.addEventListener('change', (e) => {
+                if (e.target.files.length > 0) {
+                    fileStatus.textContent = `File selected: ${e.target.files[0].name}`;
+                    confirmButton.disabled = false;
+                } else {
+                    fileStatus.textContent = 'No file selected';
+                    confirmButton.disabled = true;
+                }
+            });
+        });
+
+        function confirmScreenshot() {
+            document.getElementById('actionButtons').classList.remove('hidden');
+        }
+
+        function showNotes() {
+            document.getElementById('welcomePage').classList.add('hidden');
+            document.getElementById('notesContent').classList.remove('hidden');
+        }
+
+        function downloadNotes() {
+            // Select only the main content of the notes for download, excluding the header and footer
+            const notesContainer = document.querySelector('#notesContent main > div');
+            const notesText = notesContainer.innerText;
+            const filename = 'Vedic_Mind_Notes.txt';
+            const element = document.createElement('a');
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(notesText));
+            element.setAttribute('download', filename);
+            element.style.display = 'none';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+    </script>
+</body>
+</html>
+
