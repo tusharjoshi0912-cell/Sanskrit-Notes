@@ -751,24 +751,31 @@
                 </div>
             </main>
             
-            <!-- Footer -->
-            <footer class="full-width mt-12 py-6">
-                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center text-sm text-[#4A2E2A]">
-                     <div>
-                        <span class="font-semibold">[Previous]</span>
-                        <span class="ml-4 font-semibold">[Next]</span>
-                     </div>
-                     <div class="text-right">
-                        <p class="font-semibold">📘 Notes compiled and visualized by Tushar Joshi</p>
-                    </div>
-                </div>
-            </footer>
-        </div>
+             <div class="section-divider"></div>
 
+                <!-- Footer -->
+                <footer class="full-width mt-6 py-6 decorative-border">
+                    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-[#4A2E2A]">
+                        <p class="font-semibold text-lg">Notes compiled and visualized by Tushar Joshi</p>
+                        <p class="header-font text-2xl font-bold mt-2 text-[#8B4513]">सर्वं कृष्णार्पणमस्तु</p>
+                    </div>
+                </footer>
+            </div>
+        </main>
+    </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
+  <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hasAccessedNotes = localStorage.getItem('hasAccessedNotes');
+            const welcomePage = document.getElementById('welcomePage');
+            const notesContent = document.getElementById('notesContent');
+
+            if (hasAccessedNotes === 'true') {
+                welcomePage.classList.add('hidden');
+                notesContent.classList.remove('hidden');
+            }
+            
             const screenshotInput = document.getElementById('screenshotInput');
             const confirmButton = document.getElementById('confirmButton');
             const fileStatus = document.getElementById('fileStatus');
@@ -784,27 +791,22 @@
             });
         });
 
-        function confirmScreenshot() {
-            document.getElementById('actionButtons').classList.remove('hidden');
+        async function confirmScreenshot() {
+            const uploadedFile = document.getElementById('screenshotInput').files[0];
+            const actionButtons = document.getElementById('actionButtons');
+
+            if (!uploadedFile) {
+                return;
+            }
+
+            // Set the flag in local storage to remember that the user has accessed the notes
+            localStorage.setItem('hasAccessedNotes', 'true');
+            actionButtons.classList.remove('hidden');
         }
 
         function showNotes() {
             document.getElementById('welcomePage').classList.add('hidden');
             document.getElementById('notesContent').classList.remove('hidden');
-        }
-
-        function downloadNotes() {
-            // Select only the main content of the notes for download, excluding the header and footer
-            const notesContainer = document.querySelector('#notesContent main > div');
-            const notesText = notesContainer.innerText;
-            const filename = 'Vedic_Mind_Notes.txt';
-            const element = document.createElement('a');
-            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(notesText));
-            element.setAttribute('download', filename);
-            element.style.display = 'none';
-            document.body.appendChild(element);
-            element.click();
-            document.body.removeChild(element);
         }
     </script>
 </body>
